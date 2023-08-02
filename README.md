@@ -21,6 +21,9 @@ Once this is done, it is time to launch the Spring Boot. Do this by
 
 **Frontend**
 
+Navigate to shea-spotify-api, do this by
+<code>cd shea-spotify-website</code>
+
 Once the backend server is running it is time to build the React. Similar to the backend, first we must install npm. Do this like so
 <code>npm install</code>
 
