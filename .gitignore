@@ -1,0 +1,5 @@
+shea-spotify-api/spotifyAPI/.gitignore
+shea-spotify-api/spotifyApi/.mvn/*
+shea-spotify-api/spotifyApi/mvnw
+shea-spotify-api/spotifyApi/mvnw.cmd
+shea-spotify-website/.gitignore
