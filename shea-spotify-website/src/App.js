@@ -1,10 +1,13 @@
-import ViewMessageComponent from './component/ViewMessageComponent';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HelloWorldComponent from './component/HelloWorldComponent';
 
 function App() {
   return (
-    <div>
-      <ViewMessageComponent />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<HelloWorldComponent />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,12 +1,11 @@
 import axios from 'axios';
 
-const USER_API_BASE_URL = "http://localhost:8080/home/";
+const USER_API_BASE_URL = "http://localhost:8080/";
 
-class HelloWorldService {
-
-    getMessage(){
-        return axios.get(USER_API_BASE_URL+"hello");
-    }
+const getMessage = () => {
+    return axios.get(USER_API_BASE_URL + "hello");
 }
 
-export default new HelloWorldService()
+const exportedObject = { getMessage };
+
+export default exportedObject;

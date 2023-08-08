@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import HelloWorldService from '../service/HelloWorldService'
 
-class ViewMessageComponent extends Component {
+class HelloWorldComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {message: ''};
@@ -10,16 +10,18 @@ class ViewMessageComponent extends Component {
     componentDidMount() {
         HelloWorldService.getMessage().then(res => {
             this.setState({ message: res.data });
-        })
+        });
     }
 
     render() {
         return (
             <div>
-                <div> {this.state.message}</div>
+                <div> 
+                    {React.createElement('h1', {className: 'greeting'}, this.state.message)} 
+                </div>
             </div>
         )
     }
 }
 
-export default ViewMessageComponent
+export default HelloWorldComponent
