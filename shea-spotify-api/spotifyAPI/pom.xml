@@ -37,6 +37,10 @@
 			<artifactId>spotify-web-api-java</artifactId>
 			<version>6.4.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
