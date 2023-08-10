@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from '@material-ui/core';
 
 import { withRouter } from "react-router-dom";
-import { connect } from "react-redux";
 
 function LandingPage() {
 
