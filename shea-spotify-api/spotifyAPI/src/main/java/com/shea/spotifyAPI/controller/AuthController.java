@@ -22,7 +22,7 @@ public class AuthController {
     public static SpotifyApi spotifyApi = new SpotifyApi.Builder()
             .setClientId("5079883d0bec4f3d8705d674439e4988")
             .setClientSecret("9b92b73c7bf44a4daa2bf435110093e3")
-            .setRedirectUri(SpotifyHttpManager.makeUri("http://localhost:8080/get-user-code/"))
+            .setRedirectUri(SpotifyHttpManager.makeUri("http://localhost:8080/api/get-user-code/"))
             .build();
 
     @GetMapping("/login")
