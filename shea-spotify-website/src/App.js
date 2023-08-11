@@ -9,7 +9,6 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <div>
-      <Nav/>
       <Switch>
         <Route exact path = "/" component = {LandingPage} />
         <Route exact path = "/top-artists" component = {TopArtists} />
