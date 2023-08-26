@@ -14,18 +14,19 @@ import static com.shea.spotifyAPI.controller.AuthController.spotifyApi;
 @Slf4j
 public class GetTopArtists {
 
-    public static Paging<Artist> getUserTopArtistsPage() {
-        List<String> artistList = new ArrayList<>();
+    public static Paging<Artist> getUserTopArtistsPage(String time_range, int limit, int offset) {
+        log.debug("GetTopArtists.getUserTopArtistsPage :: Beginning Execution");
+        log.debug("GetTopArtists.getUserTopArtistsPage :: Executing with params: time_range(" + time_range +
+                ") + limit(" + limit + ") + offset(" + offset + ")");
         GetUsersTopArtistsRequest getUsersTopArtistsRequest = spotifyApi.getUsersTopArtists()
-                .time_range("medium_term")
-                .limit(10)
-                .offset(5)
+                .time_range(time_range)
+                .limit(limit)
+                .offset(offset)
                 .build();
-
         try {
             return getUsersTopArtistsRequest.execute();
         } catch (Exception e) {
-            System.out.println("Something went wrong!\n" + e.getMessage());
+            log.error("Something went wrong!\n" + e.getMessage());
         }
 
         return null;
